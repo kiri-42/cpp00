@@ -6,18 +6,17 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 02:22:05 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 02:46:43 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/26 03:00:09 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-using namespace std;
 
 int	main(int ac, char **av)
 {
 	if (ac == 1)
 	{
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 		return 0;
 	}
 	for (int i = 1; i < ac; i++)
@@ -28,8 +27,8 @@ int	main(int ac, char **av)
 			av[i][j] = toupper(av[i][j]);
 			j++;
 		}
-		cout << av[i];
+		std::cout << av[i];
 	}
-	cout << endl;
+	std::cout << std::endl;
 	return 0;
 }
