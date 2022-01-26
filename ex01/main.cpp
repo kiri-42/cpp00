@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:21:43 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 16:21:56 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/26 17:00:49 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 	PhoneBook my_phone_book;
 	while (1)
 	{
-		std::cout << "Enter the command." << std::endl;
+		std::cout << "Enter the command(ADD SEARCH EXIT)" << std::endl;
 		std::cin >> command;
 		if (command == "ADD")
 			my_phone_book.add();
