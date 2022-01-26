@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:23:16 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 17:17:19 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/26 17:24:30 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	PhoneBook::search()
 {
 	if (add_count == 0)
 	{
-		std::cout << "There is no data" << std::endl;
+		std::cout << F_RED << "There is no data" << F_RESET << std::endl;
 		return ;
 	}
 	size_t	max_size = 8;
