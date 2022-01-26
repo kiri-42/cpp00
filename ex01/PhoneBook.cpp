@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:23:16 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 17:04:19 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/26 17:17:19 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,15 +46,17 @@ void	PhoneBook::search()
 		size_t	index;
 		while (1)
 		{
-			std::cout << "Enter the index(0 ~ 7)." << std::endl;
+			std::cout << F_YELLOW << "Enter the index(0 ~ 7)." << F_RESET << std::endl;
 			std::cin >> index;
 			if (0 <= index && index < max_size)
 			{
 				contactlst[index].show_person();
 				break ;
 			}
+			std::cout << F_RED;
 			std::cout << "The value is wrong." << std::endl;
 			std::cout << "Enter the correct value." << std::endl;
+			std::cout << F_RESET;
 		}
 	}
 	return ;

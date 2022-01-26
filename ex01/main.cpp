@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:21:43 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 17:03:49 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/26 17:19:09 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ int	main(void)
 	PhoneBook my_phone_book;
 	while (1)
 	{
+		std::cout << F_YELLOW;
 		std::cout << "Enter the command(ADD SEARCH EXIT)" << std::endl;
+		std::cout << F_RESET;
 		std::cin >> command;
 		if (command == "ADD")
 			my_phone_book.add();
@@ -29,7 +31,11 @@ int	main(void)
 		else if (command == "EXIT")
 			break ;
 		else
+		{
+			std::cout << F_RED;
 			std::cout << "The command name is wrong." << std::endl;
+			std::cout << F_RESET;
+		}
 	}
 	std::cout << "The program has finished." << std::endl;
 	return (0);

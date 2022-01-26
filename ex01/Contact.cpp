@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:24:45 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 17:04:38 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/26 17:12:10 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 
 void	Contact::insert()
 {
-	std::cout << "Enter the first name" << std::endl;
+	std::cout << F_YELLOW << "Enter the first name" << F_RESET << std::endl;
 	std::cin >> first_name;
-	std::cout << "Enter the last name" << std::endl;
+	std::cout << F_YELLOW << "Enter the last name" << F_RESET << std::endl;
 	std::cin >> last_name;
-	std::cout << "Enter the nickname" << std::endl;
+	std::cout << F_YELLOW << "Enter the nickname" << F_RESET << std::endl;
 	std::cin >> nickname;
-	std::cout << "Enter the phone number" << std::endl;
+	std::cout << F_YELLOW << "Enter the phone number" << F_RESET << std::endl;
 	std::cin >> phone_number;
-	std::cout << "Enter the darkest secret" << std::endl;
+	std::cout << F_YELLOW << "Enter the darkest secret" << F_RESET << std::endl;
 	std::cin >> darkest_secret;
 	return ;
 }
