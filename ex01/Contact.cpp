@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:24:45 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 17:12:10 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/27 01:20:46 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	Contact::insert()
 
 void	Contact::show_list(size_t i)
 {
-	std::cout << "|" << std::setw(10) << std::right << i;
+	std::cout << "|" << std::setw(10) << std::right << i + 1;
 	std::cout << "|" << std::setw(10) << std::right << strlen_check(first_name);
 	std::cout << "|" << std::setw(10) << std::right << strlen_check(last_name);
 	std::cout << "|" << std::setw(10) << std::right << strlen_check(nickname);
@@ -42,10 +42,10 @@ void	Contact::show_list(size_t i)
 
 void	Contact::show_person()
 {
-	std::cout << "first name    :" << first_name << std::endl;
-	std::cout << "last name     :" << last_name << std::endl;
-	std::cout << "nickname      :" << nickname << std::endl;
-	std::cout << "phone number  :" << phone_number << std::endl;
+	std::cout << "first name    : " << first_name << std::endl;
+	std::cout << "last name     : " << last_name << std::endl;
+	std::cout << "nickname      : " << nickname << std::endl;
+	std::cout << "phone number  : " << phone_number << std::endl;
 	std::cout << "darkest secret:" << darkest_secret << std::endl;
 	return ;
 }
