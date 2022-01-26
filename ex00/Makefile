@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/26 02:48:25 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/26 16:10:18 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/01/26 16:18:54 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ NAME		= megaphone
 
 SRCS		= megaphone.cpp
 
-CC			= clang++
+CPPC			= clang++
 
-CFLAGS		= -Wall -Wextra -Werror -std=c++98
+CPPFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 .PHONY: all fclean re
 
