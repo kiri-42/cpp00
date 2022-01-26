@@ -6,12 +6,13 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:21:43 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 17:00:49 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/26 17:03:49 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "PhoneBook.hpp"
+#include "color.hpp"
 
 int	main(void)
 {

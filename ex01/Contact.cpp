@@ -6,13 +6,14 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:24:45 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 16:24:59 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/26 17:04:38 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
 #include <iostream>
 #include <iomanip>
+#include "Contact.hpp"
+#include "color.hpp"
 
 void	Contact::insert()
 {

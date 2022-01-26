@@ -6,13 +6,14 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:23:16 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 16:23:33 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/26 17:04:19 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <iomanip>
 #include "PhoneBook.hpp"
+#include "color.hpp"
 
 void	PhoneBook::add()
 {
