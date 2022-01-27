@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:24:45 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/27 01:20:46 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/01/27 15:16:05 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	Contact::show_person()
 	std::cout << "last name     : " << last_name << std::endl;
 	std::cout << "nickname      : " << nickname << std::endl;
 	std::cout << "phone number  : " << phone_number << std::endl;
-	std::cout << "darkest secret:" << darkest_secret << std::endl;
+	std::cout << "darkest secret: " << darkest_secret << std::endl;
 	return ;
 }
 
