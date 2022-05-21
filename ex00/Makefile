@@ -6,7 +6,7 @@
 #    By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/26 02:48:25 by tkirihar          #+#    #+#              #
-#    Updated: 2022/01/26 16:18:54 by tkirihar         ###   ########.fr        #
+#    Updated: 2022/05/22 01:23:11 by tkirihar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ CPPFLAGS		= -Wall -Wextra -Werror -std=c++98
 all:		$(NAME)
 
 $(NAME):	$(SRCS)
-			$(CC) $(CFLAGS) $^ -o $@
+			$(CPPC) $(CPPFLAGS) $^ -o $@
 
 fclean:
 			rm -f $(NAME)
