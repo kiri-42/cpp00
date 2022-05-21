@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:23:16 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/27 01:19:32 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/22 01:29:28 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	PhoneBook::search()
 		size_t	index;
 		while (1)
 		{
-			std::cout << F_YELLOW << "Enter the index(1 ~ 8)." << F_RESET << std::endl;
+			std::cout << F_YELLOW << "Enter the index(1 ~ 8)" << F_RESET << std::endl;
 			std::cin >> index;
 			index--;
 			if (0 <= index && index < max_size)
@@ -55,8 +55,8 @@ void	PhoneBook::search()
 				break ;
 			}
 			std::cout << F_RED;
-			std::cout << "The value is wrong." << std::endl;
-			std::cout << "Enter the correct value." << std::endl;
+			std::cout << "The value is wrong" << std::endl;
+			std::cout << "Enter the correct value" << std::endl;
 			std::cout << F_RESET;
 		}
 	}

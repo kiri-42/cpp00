@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:21:43 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/26 17:19:09 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/22 01:29:06 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ int	main(void)
 		else
 		{
 			std::cout << F_RED;
-			std::cout << "The command name is wrong." << std::endl;
+			std::cout << "The command name is wrong" << std::endl;
 			std::cout << F_RESET;
 		}
 	}
-	std::cout << "The program has finished." << std::endl;
+	std::cout << "The program has finished" << std::endl;
 	return (0);
 }
