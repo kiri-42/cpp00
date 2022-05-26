@@ -6,13 +6,35 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:21:43 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/22 01:29:06 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/27 00:49:24 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <stdlib.h>
 #include "PhoneBook.hpp"
 #include "color.hpp"
+
+std::string getline()
+{
+	std::string input;
+	std::getline(std::cin, input);
+	try
+	{
+		if (std::cin.eof() || std::cin.fail() || std::cin.bad())
+			throw "Input failed";
+	}
+	catch(const char *str)
+	{
+		std::cerr << F_RED;
+		std::cerr << str << std::endl;
+		std::cerr << F_RESET;
+
+		std::exit(1);
+	}
+
+	return input;
+}
 
 int	main(void)
 {
@@ -23,7 +45,8 @@ int	main(void)
 		std::cout << F_YELLOW;
 		std::cout << "Enter the command(ADD SEARCH EXIT)" << std::endl;
 		std::cout << F_RESET;
-		std::cin >> command;
+
+		command = getline();
 		if (command == "ADD")
 			my_phone_book.add();
 		else if (command == "SEARCH")
