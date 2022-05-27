@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:22:40 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/28 03:48:52 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:50:38 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ class Contact
 		std::string		omit_long_str(std::string str);
 
 	public:
-		void		insert();
+		void				insert();
 		std::string	getline();
-		void		show_list(size_t i);
-		void		show_person();
+		void				show_list(size_t i);
+		void				show_person();
 };
 
 #endif
