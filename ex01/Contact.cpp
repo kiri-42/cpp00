@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:24:45 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/27 10:12:11 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:48:52 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
 void	Contact::insert()
 {
 	std::cout << F_YELLOW << "Enter the first name" << F_RESET << std::endl;
-	first_name = getline();
+	_first_name = getline();
 	std::cout << F_YELLOW << "Enter the last name" << F_RESET << std::endl;
-	last_name = getline();
+	_last_name = getline();
 	std::cout << F_YELLOW << "Enter the nickname" << F_RESET << std::endl;
-	nickname = getline();
+	_nickname = getline();
 	std::cout << F_YELLOW << "Enter the phone number" << F_RESET << std::endl;
-	phone_number = getline();
+	_phone_number = getline();
 	std::cout << F_YELLOW << "Enter the darkest secret" << F_RESET << std::endl;
-	darkest_secret = getline();
+	_darkest_secret = getline();
 	return ;
 }
 
@@ -54,20 +54,20 @@ std::string Contact::getline()
 void	Contact::show_list(size_t i)
 {
 	std::cout << "|" << std::setw(10) << std::right << i + 1;
-	std::cout << "|" << std::setw(10) << std::right << omit_long_str(first_name);
-	std::cout << "|" << std::setw(10) << std::right << omit_long_str(last_name);
-	std::cout << "|" << std::setw(10) << std::right << omit_long_str(nickname);
+	std::cout << "|" << std::setw(10) << std::right << omit_long_str(_first_name);
+	std::cout << "|" << std::setw(10) << std::right << omit_long_str(_last_name);
+	std::cout << "|" << std::setw(10) << std::right << omit_long_str(_nickname);
 	std::cout << "|" << std::endl;
 	return ;
 }
 
 void	Contact::show_person()
 {
-	std::cout << "first name    : " << first_name << std::endl;
-	std::cout << "last name     : " << last_name << std::endl;
-	std::cout << "nickname      : " << nickname << std::endl;
-	std::cout << "phone number  : " << phone_number << std::endl;
-	std::cout << "darkest secret: " << darkest_secret << std::endl;
+	std::cout << "first name    : " << _first_name << std::endl;
+	std::cout << "last name     : " << _last_name << std::endl;
+	std::cout << "nickname      : " << _nickname << std::endl;
+	std::cout << "phone number  : " << _phone_number << std::endl;
+	std::cout << "darkest secret: " << _darkest_secret << std::endl;
 	return ;
 }
 

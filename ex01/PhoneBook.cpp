@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:23:16 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/28 03:41:26 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:45:57 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 PhoneBook::PhoneBook()
 {
-  add_count = 0;
+  _add_count = 0;
 }
 
 void	PhoneBook::repl()
@@ -70,30 +70,30 @@ std::string PhoneBook::getline()
 void	PhoneBook::add()
 {
   size_t	phone_book_number;
-  phone_book_number = add_count % 8;
-  contactlst[phone_book_number].insert();
-  add_count++;
+  phone_book_number = _add_count % 8;
+  _contactlst[phone_book_number].insert();
+  _add_count++;
   return ;
 }
 
 void	PhoneBook::search()
 {
-  if (add_count == 0)
+  if (_add_count == 0)
   {
     std::cout << F_RED << "There is no data" << F_RESET << std::endl;
     return ;
   }
   size_t	max_size = 8;
-  if (max_size > add_count)
+  if (max_size > _add_count)
   {
-    max_size = add_count;
+    max_size = _add_count;
   }
   show_heading();
   for (size_t i = 0; i < max_size; i++)
   {
-    contactlst[i].show_list(i);
+    _contactlst[i].show_list(i);
   }
-  if (add_count != 0)
+  if (_add_count != 0)
   {
     while (1)
     {
@@ -106,7 +106,7 @@ void	PhoneBook::search()
         index--;
         if (!(0 <= index && index < max_size))
           throw 1;
-        contactlst[index].show_person();
+        _contactlst[index].show_person();
       }
       catch(const int n)
       {
@@ -128,7 +128,7 @@ void  PhoneBook::check_valid(std::string str)
     throw 1;
 }
 
-bool isNumber(std::string str)
+bool PhoneBook::isNumber(std::string str)
 {
   size_t len = str.length();
   for (size_t i = 0; i < len; i++)

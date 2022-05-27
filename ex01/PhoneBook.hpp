@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:22:17 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/28 03:20:09 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:46:22 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@
 class PhoneBook
 {
   private:
-    Contact       contactlst[8];
-    unsigned int  add_count;
+    Contact       _contactlst[8];
+    unsigned int  _add_count;
 
     PhoneBook();
+    bool          isNumber(std::string str);
     void          show_heading();
     std::string   getline();
     void          add();

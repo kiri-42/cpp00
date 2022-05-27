@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:22:40 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/27 11:27:29 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:48:52 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 class Contact
 {
 	private:
-		std::string		first_name;
-		std::string		last_name;
-		std::string		nickname;
-		std::string		phone_number;
-		std::string		darkest_secret;
+		std::string		_first_name;
+		std::string		_last_name;
+		std::string		_nickname;
+		std::string		_phone_number;
+		std::string		_darkest_secret;
+
 		std::string		omit_long_str(std::string str);
 
 	public:
