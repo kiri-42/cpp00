@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:24:45 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/28 03:48:52 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:53:30 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ std::string Contact::getline()
   return input;
 }
 
-void	Contact::show_list(size_t i)
+void	Contact::print_list(size_t i)
 {
 	std::cout << "|" << std::setw(10) << std::right << i + 1;
 	std::cout << "|" << std::setw(10) << std::right << omit_long_str(_first_name);
@@ -61,7 +61,7 @@ void	Contact::show_list(size_t i)
 	return ;
 }
 
-void	Contact::show_person()
+void	Contact::print_person()
 {
 	std::cout << "first name    : " << _first_name << std::endl;
 	std::cout << "last name     : " << _last_name << std::endl;

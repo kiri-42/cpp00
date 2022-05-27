@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:22:17 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/28 03:46:22 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:56:21 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ class PhoneBook
 
     PhoneBook();
     bool          isNumber(std::string str);
-    void          show_heading();
+    void          print_heading();
     std::string   getline();
+    size_t        get_max_size();
     void          add();
     void          search();
     void          check_valid(std::string str);

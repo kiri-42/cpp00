@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:23:16 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/28 03:45:57 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:59:01 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,16 +83,14 @@ void	PhoneBook::search()
     std::cout << F_RED << "There is no data" << F_RESET << std::endl;
     return ;
   }
-  size_t	max_size = 8;
-  if (max_size > _add_count)
-  {
-    max_size = _add_count;
-  }
-  show_heading();
+
+  print_heading();
+  size_t	max_size = get_max_size();
   for (size_t i = 0; i < max_size; i++)
   {
-    _contactlst[i].show_list(i);
+    _contactlst[i].print_list(i);
   }
+
   if (_add_count != 0)
   {
     while (1)
@@ -100,13 +98,15 @@ void	PhoneBook::search()
       try
       {
         std::cout << F_YELLOW << "Enter the index(1 ~ 8)" << F_RESET << std::endl;
+
         std::string  line = getline();
         check_valid(line);
         size_t index = std::stoi(line);
         index--;
         if (!(0 <= index && index < max_size))
           throw 1;
-        _contactlst[index].show_person();
+
+        _contactlst[index].print_person();
       }
       catch(const int n)
       {
@@ -118,6 +118,26 @@ void	PhoneBook::search()
     }
   }
   return ;
+}
+
+void	PhoneBook::print_heading()
+{
+  std::cout << "|" << std::setw(10) << std::right << "INDEX";
+  std::cout << "|" << std::setw(10) << std::right << "FIRST NAME";
+  std::cout << "|" << std::setw(10) << std::right << "LAST NAME";
+  std::cout << "|" << std::setw(10) << std::right << "NICK NAME";
+  std::cout << "|" << std::endl;
+  return ;
+}
+
+size_t  PhoneBook::get_max_size()
+{
+  size_t	max_size = 8;
+  if (max_size > _add_count)
+  {
+    max_size = _add_count;
+  }
+  return max_size;
 }
 
 void  PhoneBook::check_valid(std::string str)
@@ -139,12 +159,3 @@ bool PhoneBook::isNumber(std::string str)
   return true;
 }
 
-void	PhoneBook::show_heading()
-{
-  std::cout << "|" << std::setw(10) << std::right << "INDEX";
-  std::cout << "|" << std::setw(10) << std::right << "FIRST NAME";
-  std::cout << "|" << std::setw(10) << std::right << "LAST NAME";
-  std::cout << "|" << std::setw(10) << std::right << "NICK NAME";
-  std::cout << "|" << std::endl;
-  return ;
-}
