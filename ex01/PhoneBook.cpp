@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:23:16 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/27 09:36:05 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/27 09:46:27 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #include <iomanip>
 #include "PhoneBook.hpp"
 #include "color.hpp"
+
+PhoneBook::PhoneBook()
+{
+  add_count = 0;
+}
 
 void	PhoneBook::repl()
 {
@@ -78,6 +83,7 @@ void	PhoneBook::search()
     return ;
   }
   size_t	max_size = 8;
+  std::cerr << add_count << std::endl;
   if (max_size > add_count)
   {
     max_size = add_count;
