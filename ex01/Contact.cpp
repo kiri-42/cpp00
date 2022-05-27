@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:24:45 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/01/27 15:16:05 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/27 10:05:22 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ void	Contact::insert()
 void	Contact::show_list(size_t i)
 {
 	std::cout << "|" << std::setw(10) << std::right << i + 1;
-	std::cout << "|" << std::setw(10) << std::right << strlen_check(first_name);
-	std::cout << "|" << std::setw(10) << std::right << strlen_check(last_name);
-	std::cout << "|" << std::setw(10) << std::right << strlen_check(nickname);
+	std::cout << "|" << std::setw(10) << std::right << omit_long_str(first_name);
+	std::cout << "|" << std::setw(10) << std::right << omit_long_str(last_name);
+	std::cout << "|" << std::setw(10) << std::right << omit_long_str(nickname);
 	std::cout << "|" << std::endl;
 	return ;
 }
@@ -50,9 +50,9 @@ void	Contact::show_person()
 	return ;
 }
 
-std::string	Contact::strlen_check(std::string str)
+std::string	Contact::omit_long_str(std::string str)
 {
-	if (str.length() >= 10)
+	if (str.length() > 10)
 	{
 		str = str.replace(9, 1, ".").substr(0, 10);
 	}
