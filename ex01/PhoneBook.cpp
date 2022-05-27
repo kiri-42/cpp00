@@ -6,12 +6,13 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:23:16 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/27 09:48:17 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:41:26 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <iomanip>
+#include <sstream>
 #include "PhoneBook.hpp"
 #include "color.hpp"
 
@@ -94,24 +95,48 @@ void	PhoneBook::search()
   }
   if (add_count != 0)
   {
-    size_t	index;
     while (1)
     {
-      std::cout << F_YELLOW << "Enter the index(1 ~ 8)" << F_RESET << std::endl;
-      std::cin >> index;
-      index--;
-      if (0 <= index && index < max_size)
+      try
       {
+        std::cout << F_YELLOW << "Enter the index(1 ~ 8)" << F_RESET << std::endl;
+        std::string  line = getline();
+        check_valid(line);
+        size_t index = std::stoi(line);
+        index--;
+        if (!(0 <= index && index < max_size))
+          throw 1;
         contactlst[index].show_person();
-        break ;
       }
-      std::cout << F_RED;
-      std::cout << "The value is wrong" << std::endl;
-      std::cout << "Enter the correct value" << std::endl;
-      std::cout << F_RESET;
+      catch(const int n)
+      {
+        std::cout << F_RED;
+        std::cout << "The value is wrong" << std::endl;
+        std::cout << "Enter the correct value" << std::endl;
+        std::cout << F_RESET;
+      }
     }
   }
   return ;
+}
+
+void  PhoneBook::check_valid(std::string str)
+{
+  if (str == "")
+    throw 1;
+  if (!isNumber(str))
+    throw 1;
+}
+
+bool isNumber(std::string str)
+{
+  size_t len = str.length();
+  for (size_t i = 0; i < len; i++)
+  {
+    if (std::isdigit(str[i]) == 0)
+      return false;
+  }
+  return true;
 }
 
 void	PhoneBook::show_heading()
