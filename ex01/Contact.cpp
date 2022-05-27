@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:24:45 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/27 10:05:22 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/27 10:12:11 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,37 @@
 void	Contact::insert()
 {
 	std::cout << F_YELLOW << "Enter the first name" << F_RESET << std::endl;
-	std::cin >> first_name;
+	first_name = getline();
 	std::cout << F_YELLOW << "Enter the last name" << F_RESET << std::endl;
-	std::cin >> last_name;
+	last_name = getline();
 	std::cout << F_YELLOW << "Enter the nickname" << F_RESET << std::endl;
-	std::cin >> nickname;
+	nickname = getline();
 	std::cout << F_YELLOW << "Enter the phone number" << F_RESET << std::endl;
-	std::cin >> phone_number;
+	phone_number = getline();
 	std::cout << F_YELLOW << "Enter the darkest secret" << F_RESET << std::endl;
-	std::cin >> darkest_secret;
+	darkest_secret = getline();
 	return ;
+}
+
+std::string Contact::getline()
+{
+  std::string input;
+  std::getline(std::cin, input);
+  try
+  {
+    if (std::cin.eof() || std::cin.fail() || std::cin.bad())
+      throw "Input failed";
+  }
+  catch(const char *str)
+  {
+    std::cerr << F_RED;
+    std::cerr << str << std::endl;
+    std::cerr << F_RESET;
+
+    std::exit(1);
+  }
+
+  return input;
 }
 
 void	Contact::show_list(size_t i)

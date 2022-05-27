@@ -6,7 +6,7 @@
 /*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 16:22:40 by tkirihar          #+#    #+#             */
-/*   Updated: 2022/05/27 10:05:08 by tkirihar         ###   ########.fr       */
+/*   Updated: 2022/05/27 10:08:22 by tkirihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Contact
 
 	public:
 		void		insert();
+		std::string	getline();
 		void		show_list(size_t i);
 		void		show_person();
 };
